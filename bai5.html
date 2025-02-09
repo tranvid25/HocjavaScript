@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style type="text/css">
+        p{
+            background-color: red;
+        }
+        .main{
+            width: 400px;
+            height: 1000px;
+            margin: 0 auto;
+            border: 2px solid green;
+        }
+        .tieude h3{
+            text-transform: uppercase;
+            text-align: center;
+            background-color: green;
+            color: white;
+            padding: 10px 0;
+        }
+        h3 {
+            margin: 0px;
+        }
+        .form-group{
+            padding: 10px 5px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            // - cho action dung form lai
+            // - lấy gia tri nhập vào the input va kiem tra
+            //     + nêu chua nhap thi báo loi
+            //     + neu nhap roi thi cho action chay
+
+            // submit: chi dành cho form
+            $("form").submit(function(){
+
+                // lấy gia tri nhập vào the input va kiem tra
+                var getItem1 = $("input.email").val();
+                var getItem2 = $("input#pass").val();
+
+                // alert(getItem1)
+
+                if(getItem1 == ""){
+                    // text: gán đoạn text vao the html
+                    $("p.err1").text("vui long nhâp")
+                }else{
+                    $("p.err1").text("");
+                }
+
+                if(getItem2 == ""){
+                    // text: gán đoạn text vao the html
+                    $("p.err2").text("vui long nhâp p")
+                }else{
+                    $("p.err2").text("");
+                }
+
+                // nêu ca 2 nhập roi thi cho chay
+                if(getItem1 != "" && getItem2 != ""){
+                    return true;
+                }
+
+                // dừng lai
+                return false;
+            })
+            $('form.gopy').submit(function(){
+                var geti1=$('input.name').val();
+                var geti2=$('input.email').val();
+                var geti3=$('input.phone').val();
+                var geti4=$('input.diachi').val();
+                var geti5=$('input.title').val();
+                var geti6=$('textarea#noidung').val();
+                
+                if(geti1 == ""){
+                    $("p.err1").text("vui lòng nhập lại")
+                    
+                }else{
+                    $("p.err1").text("")
+                }
+                if(geti2 == ""){
+                    $("p.err2").text("vui lòng nhập lại")
+                }else{
+                    $("p.err2").text("")
+                }
+                if(geti3 == ""){
+                    $("p.err3").text("vui lòng nhập lại")
+                }else{
+                    $("p.err3").text("")
+                }
+                if(geti4 == ""){
+                    $("p.err4").text("vui lòng nhập lại")
+                }else{
+                    $("p.err4").text("")
+                }
+                if(geti5 == ""){
+                    $("p.err5").text("vui lòng nhập lại")
+                }else{
+                    $("p.err5").text("")
+                }
+                if(geti6 == ""){
+                    $("p.err6").text("vui lòng nhập lại")
+                }else{
+                    $("p.err6").text("")
+                }
+
+
+               if(geti1 != "" && geti2 != "" && geti3 != "" && geti4 != "" && geti5 != "" && geti6 != ""){
+                return true;
+               }
+                
+                return false;
+
+            })
+
+        })
+    </script>
+
+    <div class="main">
+        <div class="tieude">
+            <h3>góp ý liên hệ với 24h</h3>
+        </div>
+        <div>
+            <form class="gopy" action="https://www.24h.com.vn/">
+                <div class="form-group">
+                    <label for="name">Họ và tên</label>
+                    <input type="text" id="name" value="" class="name">
+                    <p class="err1"></p>
+                </div>
+                <div class="form-group">
+                    <label for="email">Địa chỉ Email</label>
+                    <input type="text" id="email" value="" class="email">
+                    <p class="err2"></p>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số điện thoại</label>
+                    <input type="text" id="phone" value="" class="phone">
+                    <p class="err3"></p>
+                </div>
+                <div class="form-group">
+                    <label for="diachi">Địa chỉ nơi cư trú</label>
+                    <input type="text" id="diachi" value="" class="diachi">
+                    <p class="err4"></p>
+                </div>
+                <div class="form-group">
+                    <label for="title">Tiêu đề</label>
+                    <input type="text" id="title" value="" class="title">
+                    <p class="err5"></p>
+                </div>
+                <div class="form-group">
+                    <label for="noidung">Nội dung</label>
+                    <textarea name="noidung" id="noidung"></textarea>
+                    <p class="err6"></p>
+                </div>
+                <button type="submit">click</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<h1>xu ly form</h1>
+
+<form action="https://www.24h.com.vn/">
+    
+    <input type="text" name="" value="" class="email">
+    <p class="errr1"></p>
+
+    <input type="text" name="" value="" id="pass">
+    <p class="errr2"></p>
+    
+
+    <!-- luon co 1 nut button de click vao -->
+    <button type="submit">click</button>
+</form>

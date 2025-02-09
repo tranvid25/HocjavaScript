@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const objData5=JSON.parse(localStorage.getItem("index5"));
+        if(!objData5){
+            console.log("ko có")
+        }
+        else{
+            Object.keys(objData5).map(function(key,index){
+                if(objData5[key]==9){
+                    console.log(objData5[key])
+                }
+            })
+            const newobj={};
+            Object.keys(objData5).map(function(key,index){
+                if(objData5[key]>5){
+                    newobj[key]=objData5[key]
+                }
+            })
+            console.log(newobj);
+            localStorage.setItem('newobj',JSON.stringify(newobj))
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style type="text/css">
+      
+        .demo{
+            background-color: blue;
+        }
+        .highlight {
+            background-color: yellow;
+            color: red;
+        }
+        .container{
+            padding-top: 20px;
+            width: 400px;
+            margin: 0 auto;
+        }
+        #imgbig{
+            width: 100%;
+            object-fit: cover;
+        }
+        .imagetiny{
+            max-width: 100%;
+            display: flex;
+            gap: 10px;
+            flex: 1;
+        }
+        .imagetiny .tiny1{
+            width: 23%;
+            height: auto;
+            object-fit: cover;
+        }
+        .tiny1{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- jquery(nâng cao qua javasript) -->
+    <!-- de làm jquery thi goi thư viện của nó vào -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            // cong thuc:  $(ten the).ten-hàm()
+
+            // click vao the button có class xx
+            
+            $("button.xx").click(function(){
+
+                // $("h1").hide();
+
+                // addClass: thêm 1 class vao the html h1
+                $("h1").addClass("demo")
+            })
+
+            // click vao the button có id=yy
+            $("button#yy").click(function(){
+                // $("h1").show();
+
+                // removeClass xoa class ra the html
+                // $("h1").removeClass("demo")
+
+                // hasClass: kiem tra 1 class co trong the html k?
+                // - nêu có thi tra ve TRUE
+                // - k có => false
+
+                // kiem tra the h1 có class "demo" k?
+                var check = $("h1").hasClass("demo");
+                // alert(check)
+
+                // kiem tra neu h1 co class demo thi xoa demo di 
+                // kiem tra neu h1 k co class demo thi thêm demo 
+
+                if(check==true){
+                    $("h1").removeClass("demo")
+                    
+                } else{
+                    $("h1").addClass("demo")
+                }
+
+            })
+
+            $("button.xy").click(function(){
+                var check1 = $("a").hasClass("ACTIVE");
+                if(check1==true){
+                    $("a").removeClass("ACTIVE")
+                }
+                else
+                {
+                    $("a").addClass("ACTIVE")
+                }
+            })
+            $("button.bt2").click(function(){
+                var check1 = $("a").hasClass("ACTIVE");
+                if(check1==true){
+                    $("a").removeClass("ACTIVE")
+                    $("p").hide()
+                }
+                else
+                {
+                    $("a").addClass("ACTIVE")
+                    $("p").show()
+                }
+            })
+            $(".item1").click(function(){
+                $("li").removeClass("highlight");
+                $(".item1").addClass("highlight");
+            })
+            $(".item2").click(function(){
+                $("li").removeClass("highlight");
+                $(".item2").addClass("highlight");
+            })
+            $(".item3").click(function(){
+                $("li").removeClass("highlight");
+                $(".item3").addClass("highlight");
+            })
+            $(".item4").click(function(){
+                $("li").removeClass("highlight");
+                $(".item4").addClass("highlight");
+            })
+
+            $("button.bt3").click(function(){
+                var check2 = $("p.bb").hasClass("aa")
+                if(check2==true){
+                    $("p.bb").removeClass("aa")
+                    $("p.bb").hide();
+                }
+                else{
+                    $("p.bb").addClass("aa")
+                    $("p.bb").show();
+                }
+            })
+            $("button.bt4").click(function(){
+                var img1src = $("#img1").attr("src")
+                $("#img2").attr("src",img1src)
+                alert("đã sao chép src1 sang src 2")
+            })
+            $("img#4img").click(function(){
+                var img4src=$(this).attr("src")
+                alert("ảnh đc click "+img4src)
+            })
+            $("img.tiny1").click(function(){
+                var tinysrc=$(this).attr("src")
+                $("img#imgbig").attr("src",tinysrc)
+            })
+            
+            }
+        )
+
+
+
+    </script>
+    
+    <h1>hoc 1 số hàm cơ bàn jquery</h1>
+    <button class="xx">click2</button>
+    
+    <button id="yy">click1</button>
+    <button class="xy">click3</button>
+    <a href=""></a>
+    <p>aaaaa</p>
+    <button class="bt2">
+        <a href=""> click4</a>
+    </button>
+    <ul>
+        <li class="item1"></li>
+        <li class="item2"></li>
+        <li class="item3"></li>
+        <li class="item4"></li>
+    </ul>
+    <button class="bt3">click3</button>
+    <p class="bb">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    <button class="bt4">click4</button>
+    <img id="img1" src="https://tse3.mm.bing.net/th?id=OIP.Ma7bhmnjnjPwImT35CvIvQHaG8&pid=Api&P=0&h=180" alt="">
+    <img id="img2" src="https://tse1.mm.bing.net/th?id=OIP.vmqtZjqI629V9dHYZdpMNwHaEA&pid=Api&P=0&h=180" alt="">
+    <img id="4img" src="https://tse3.mm.bing.net/th?id=OIP.Ma7bhmnjnjPwImT35CvIvQHaG8&pid=Api&P=0&h=180" alt="">
+    <img id="4img" src="https://tse3.mm.bing.net/th?id=OIP.Ma7bhmnjnjPwImT35CvIvQHaG8&pid=Api&P=0&h=180" alt="">
+    <img id="4img" src="https://tse3.mm.bing.net/th?id=OIP.Ma7bhmnjnjPwImT35CvIvQHaG8&pid=Api&P=0&h=180" alt="">
+    <img id="4img" src="https://tse3.mm.bing.net/th?id=OIP.Ma7bhmnjnjPwImT35CvIvQHaG8&pid=Api&P=0&h=180" alt="">
+
+     
+    <div class="container">
+        <img id="imgbig" src="https://tse1.mm.bing.net/th?id=OIP.WG7JbZYyWYGN4OqJkxrSLgHaEK&pid=Api&P=0&h=180" alt="">
+        <div class="imagetiny">
+            <img class="tiny1" src="https://tse3.mm.bing.net/th?id=OIP.tmqTIr39v-7qhrMQNm1jxwHaEe&pid=Api&P=0&h=180" alt="">
+            <img class="tiny1" src="https://tse4.mm.bing.net/th?id=OIP.vNTguNr8doWb6npXZNh3xQHaDH&pid=Api&P=0&h=180" alt="">
+            <img class="tiny1" src="https://tse2.mm.bing.net/th?id=OIP.fpPUnyCKifCecunmCCm8ngHaDt&pid=Api&P=0&h=180" alt="">
+            <img class="tiny1" src="https://tse2.mm.bing.net/th?id=OIP.oMbBKSXywfmQi0ebnIy9JAHaEK&pid=Api&P=0&h=180" alt="">
+        </div>
+    </div>
+
+    
+
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.test').css('border','1px solid blue')
+            $('#test1').css('border','1px solid red')
+            $('.list,.divison,#aa').css('border','1px solid yellow')
+            $('ul.testt li:eq(2)').css('border','1px solid blue')
+            $('ul.testtt li:gt(1)').css('border','1px solid gray')
+            $('ul.le li:even').css('border','1px solid skyblue')
+            $('ul.chan li:odd').css('border','1px solid black')
+        })
+    </script>
+</head>
+<body>
+    <!-- //chọn thành phần theo class -->
+    <div class="test">
+        div
+    </div>
+    <p class="test">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur maxime eum laudantium est similique placeat voluptate consequuntur magnam veniam aliquam quibusdam eveniet quasi rerum sit, voluptatem vel ad architecto deserunt?</p>
+
+    <!-- chọn thành phần theo id cụ thể -->
+     <div id="test1">test</div>
+    <!-- chọn nhiêu thành phần cùng lúc -->
+     <div class="list">list</div>
+     <div class="divison">divion</div>
+     <div id="aa">aaa</div>
+    <!-- chọn thành phần với một chỉ số n cụ thể -->
+     <ul class="testt">
+        <li>thứ nhất</li>
+        <li>thứ hai</li>
+        <li>thứ ba</li>
+     </ul>
+     <!-- chọn các thành phần với chỉ số lớn hơn n -->
+      <ul class="testtt">
+        <li>thứ nhất</li>
+        <li>thứ hai</li>
+        <li>thứ ba</li>
+      </ul>
+      <!-- chọn các thành phần nhỏ hơn n:lt(n) -->
+       <ul class="le">
+        <li>aa</li>
+        <li>aa</li>
+        <li>aa</li>
+        <li>aa</li>
+       </ul>
+       <!-- chọn các thành phần chẵn hơn -->
+        <ul class="chan">
+            <li>aa</li>
+            <li>aa</li>
+            <li>aa</li>
+            <li>aa</li>
+        </ul>
+</body>
+</html>

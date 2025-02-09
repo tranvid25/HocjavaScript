@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const objData7=JSON.parse(localStorage.getItem("index5"));
+        if(!objData7){
+            console.log("ko có")
+        }
+        else{
+            console.log("tồn tại: ",objData7)
+            const objData8={}
+            for(let i=11;i<=20;i++){
+                objData8[`key${i}`]=i
+            }
+            console.log(objData8)
+            const obj9={
+                ...objData7,
+                ...objData8
+            }
+            let totalsum=0;
+            const values=Object.values(obj9)
+            for(let i=0;i<values.length;i++){
+                totalsum+=values[i]
+            }
+            console.log(totalsum)
+        }
+    </script>
+</body>
+</html>

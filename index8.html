@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+
+        $(document).ready(function(){ 
+        $('form#userForm').submit(function(){
+            var name=$('input#in_name').val().trim();
+            var mail=$('input#in_mail').val().trim();
+            if(name==""|| mail==""){
+                alert("không được để trống");
+                return
+            }
+            const objcon={
+                xx:name,
+                yy:mail
+            }
+            let objCha=JSON.parse(localStorage.getItem('objCha')) || {};
+            objCha[name]=objcon;
+            localStorage.setItem('objCha',JSON.stringify(objCha))
+        });
+        
+        })
+    
+
+    
+    </script>
+    <form id="userForm">
+        <label for="username">Username:</label>
+        <input type="text" id="in_name" name="username" placeholder="Nhập username">
+        <label for="email">Email:</label>
+        <input type="text" id="in_mail" name="email" placeholder="Nhập email">
+        <button type="submit">Click</button>
+    </form>
+</body>
+</html>
+<!-- - let arr=[
+          {id:'john',name:"John Smith",age:20},
+          {id:'ann',name:"Ann Smith",age:24},
+          {id:'pete',name:"Pete Peterson",age:31}
+        ]
+        let users=arr.map(item=>item.id);
+        console.log(users)
+        let obj= Object.fromEntries(arr.map(item => [item.id, item]));
+        console.log(obj);
+        const objCha1 = {
+            'bao1': { 'xx': 'baovic', 'yy': 'baovic@gmail.com' },
+            'bao2': { 'xx': 'baovic2', 'yy': 'baovic@gmail.com2' },
+            'bao3': { 'xx': 'baovic3', 'yy': 'baovic@gmail.com3' },
+            'bao4': { 'xx': 'baovic4', 'yy': 'baovic4@gmail.com4' }
+          };
+        Object.entries(objCha1).map(([key, value]) => {
+            console.log(`${key} = ${value.xx}`);
+          }); --        > -->

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+      
+        function findmax(x,y,z){
+            let max;
+            if(x>=y && x>=z){
+                max=x
+            }
+            else if(y>=x && y>=z){
+                max=y
+            }
+            else{
+                max=z
+            }
+    
+            console.log(max)
+        }
+
+        function for1(){
+            for(let i=1;i<11;i++){
+               console.log(i)
+            }
+        }
+        function for2(){
+            for(let i=1;i<11;i++){
+                if(i%2!==0){
+                    console.log(i)
+                }
+            }
+        }
+        function for3(){
+            for(let i=1;i<11;i++){
+                if(i<5){
+                    console.log(i)
+                }
+            }
+        }
+        function for4(){
+            for(let i=1;i<11;i++){
+                if(i==6){
+                    console.log(i)
+                }
+            }
+        }
+        function for5(){
+            let sum=0;
+            for(let i =1;i<11;i++){
+              sum+=i;
+            }
+            console.log(sum);
+        }
+        function for6(n){
+            let s=0;
+          for(i=1;i<n;i++){
+            s=s+1/i;
+          }
+          console.log(s)
+        }
+      
+    </script>
+
+    <h1>viet 1 su kien onclick(click vao the html ) thi ham findmax de dc goi </h1>
+    <button onclick="findmax(6,2,3)">click1</button>
+    <button onclick="findmax(6,2,7)">click2</button>
+    <button onclick="for1()">click3</button>
+    <button onclick="for2()">click4</button>
+    <button onclick="for3()">click5</button>
+    <button onclick="for4()">click6</button>
+    <button onclick="for5()">click7</button>
+    <button onclick="for6(10)">click8</button>
+    
+     <!-- su kien: la hanh dong tac dong vao the html  -->
+
+</body>
+</html>

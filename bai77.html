@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <form id="form1" action="">
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email">
+        <p class="err1"></p>
+    
+        <label for="password">Password: </label>
+        <input type="password" id="password" name="password">
+        <p class="err2"></p>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <form id="form2" action="">
+        <button type="submit">Get Email and Password</button>
+    </form>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var getitem1, getitem2;
+    
+            $('#form1').submit(function(event) {
+                event.preventDefault();  
+                getitem1 = $('input#email').val();
+                getitem2 = $('input#password').val();
+                if (getitem1 == "") {
+                    $('p.err1').text("Vui lòng nhập lại");
+                } else {
+                    $('p.err1').text("");
+                }
+    
+              
+                if (getitem2 == "") {
+                    $('p.err2').text("Vui lòng nhập lại");
+                } else {
+                    $('p.err2').text("");
+                }
+    
+                
+                if (getitem1 != "" && getitem2 != "") {
+                    return true;
+                }
+                return false;
+            });
+    
+            $('#form2').submit(function(event) {
+                event.preventDefault();  
+                console.log("Email: " + getitem1);
+                console.log("Password: " + getitem2);
+                alert('Email: ' + getitem1 + '\nPassword: ' + getitem2);
+            });
+        });
+    </script>
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+       p {
+         background-color: red;
+       }
+    </style>
+    <!-- phai goi thu vien no vao -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            
+         
+            
+
+            $("form").submit(function(e){
+               // var xxx = $("textarea").val();
+
+               var getS = $("select").val();
+               
+
+               if(getS == ""){
+                    $("p.p2").text("vui long chon")
+               }else{
+                    $("p.p2").text("")
+               }
+
+
+
+               // lay trang thai da check hay chua
+               var getCheck = $("input#checkbox").is(":checked");
+               alert(getCheck)
+               // chon-> true
+               // chưa ->False
+
+               
+
+               if(getCheck == false){
+                // => loi
+                    $("p.p1").text("loi")
+               }else{
+                    $("p.p1").text("")
+               }
+               
+              
+
+               return false;
+            })
+
+            // bien toan cuc: là biến dc su dung ở bat ky dau
+            // bien cục bộ: la biến dc su dung trong pham vi khai bao
+
+            // bien toan cuc
+           // var x = 123;
+           // var z = "";//666
+
+
+           // $(".form1").submit(function(){
+
+           //      // alert(x) => 123
+
+           //      // biến cục bộ
+           //      var y = 666;
+           //      // alert(y) => 666
+
+           //      // // lay y gán cho z 
+           //      // z = y ;
+           //      // alert(Z) => Y = 666
+                
+           //      return false;
+           // })
+
+           // $(".form2").submit(function(){
+                
+           //      // alert(x) => 123
+
+           //      alert(y) => undefined(k xac định)
+
+           //      // alert(z) => 666 
+
+           //      return false;
+           // })
+            
+            // alert(x) => 123
+     
+        })
+
+
+
+
+           
+           
+   </script>
+</head>
+<body>
+
+
+
+
+
+
+<!-- 
+trong form có cac the:
+- input type=text, checkbox, radio, file
+- textarea,
+- select -->  
+
+    <!-- <img src={"http../..." + value['image']} /> -->
+
+   <form action="https://www.24h.com.vn/?">
+        <!-- <textarea></textarea> -->
+        <input type="checkbox" name="" id="checkbox" value="">
+        <p class="p1"></p>
+
+        <select>
+            <option value="">vui long chon</option>
+            <option value="1">male</option>
+            <option value="2">female</option>
+        </select>
+
+         <p class="p2"></p>
+
+        <button type="submit">send 1</button>
+   </form>
+
+   
+
+</body>
+</html>

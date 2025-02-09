@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const objData2=JSON.parse(localStorage.getItem("index1"));
+        if(!objData2){
+            console.log("Không có obj trong localstorage")
+        }else{
+            console.log("dữ liệu hiện tại: ",objData2)
+            delete objData2.newobj
+            Object.keys(objData2).map(function(key,index) {
+                console.log(`Key: ${key}, Value: ${objData2[key]}`);
+            });
+            localStorage.setItem("index1",JSON.stringify(objData2))
+            console.log("đã xóa key new obj")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style type="text/css">
+    .dangky{
+        width: 470px;
+        height: 500px;
+        background-color: aqua;
+        border: 1px solid gray;
+        padding: 20px;
+       
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .nut1,.nut2{
+       float: right; 
+    }
+    </style>
+</head>
+<body>
+   <script>
+    $(document).ready(function(){
+       alert("thông báo code đã chạy");
+       <!-- $('.dangky').animate({opacity:0,marginLeft:-100}) -->
+       $('.dangnhap').animate({opacity:0,marginLeft:-100})
+       //áp dụng 3 phần tử
+       $('.nut2').click(function(event){
+         $('.dangnhap').animate({opacity:0,marginLeft:-100});
+         //dang ký đi vào
+         $('.dangky').animate({opacity:1,marginLeft:0})
+       })
+
+       $('.nut1').click(function(event){
+        $('.dangky').animate({opacity:0,marginLeft:-100})
+        $('.dangnhap').animate({opacity:1,marginLeft:0})
+       })
+       // cho tất cả nội dung thu lại
+       $('.nd').slideUp();
+       //click vào thẻ h3
+       $('.motkjoi h3').click(function(event){
+        // tự đọng co nội dung phù hợp
+        $('.nd').slideUp();
+        $(this).next().slideToggle();
+        $(this).toggleClass('xanh')
+       })
+
+    });
+   </script>
+    <div class="dangky">
+        <button class="nut1">đăng nhập</button>
+    </div>
+     <div class="dangnhap">
+        <button class="nut2">đăng ký</button>
+     </div>
+     <div class="container">
+        <h1>hiệu ứng jquery</h1>
+        <h3>according</h3>
+     </div>
+     <div class="hieuung">
+        <div class="motkjoi">
+            <h3>selector</h3>
+            <div class="nd">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia numquam eius, ipsum molestiae animi veniam expedita laborum minus inventore labore, veritatis, nemo reprehenderit ad magni et exercitationem optio sapiente enim!
+            </div>
+        </div>
+        <div class="motkjoi">
+            <h3>event</h3>
+            <div class="nd">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia numquam eius, ipsum molestiae animi veniam expedita laborum minus inventore labore, veritatis, nemo reprehenderit ad magni et exercitationem optio sapiente enim!
+            </div>
+        </div>
+        <div class="motkjoi">
+            <h3>selector</h3>
+            <div class="nd">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia numquam eius, ipsum molestiae animi veniam expedita laborum minus inventore labore, veritatis, nemo reprehenderit ad magni et exercitationem optio sapiente enim!
+            </div>
+        </div>
+        <div class="motkjoi">
+            <h3>change</h3>
+            <div class="nd">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia numquam eius, ipsum molestiae animi veniam expedita laborum minus inventore labore, veritatis, nemo reprehenderit ad magni et exercitationem optio sapiente enim!
+            </div>
+        </div>
+        <div class="motkjoi">
+            <h3>animate</h3>
+            <div class="nd">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia numquam eius, ipsum molestiae animi veniam expedita laborum minus inventore labore, veritatis, nemo reprehenderit ad magni et exercitationem optio sapiente enim!
+            </div>
+        </div>
+     </div>
+</body>
+</html>
+<!-- học các cách xử lý thẻ html(selector) với:
+   +this,
+   +next,
+   +sibling,
+   +parent -->
+
+
+   <!-- học các sự kiện:
+   +di chuột,
+   +cuộn chuột,
+   +click chuột,
+   +kéo chuột -->
+
+   <!-- học các hàm xử lý hiệu ứng với jquery -->
+    <!-- animate 
+    scroll
+    xu ly class -->
+
+    <!-- hàm xử lý hiệu ứng
+    +slideUp()
+    SlideDown
+    +Slide Toggle
+    +Add class
+    +removeClass
+    +ToggleClass -->
