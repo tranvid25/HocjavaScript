@@ -9,7 +9,7 @@
     <h1>Chuỗi</h1>
     <script>
      //học về chuỗi
-    const siu="ronaldo"
+    const siu=" ronaldo"
     console.log(siu)
     //xuống dòng chuỗi
     const str="Con cò mày đi ăn đêm\nđậu phải cành mềm"
@@ -19,6 +19,18 @@
     //string.substring(index bắt đầu,index kết thúc)
     console.log(str.substring(1,2))// sẽ lấy ra được chữ o
     console.log(str.substring(2))//thì nó sẽ lấy từ từ ứng với index2 trở đi
+    //CHÈN KÝ TỰ VÀO CHUỖI
+    let chen=str+siu
+    console.log(chen)
+    //hoặc dùng các phương thức trên
+    let result=str.slice(0,3) + chen.substring(2)
+    console.log(result)
+    //CHUYỂN CHỮ HOA THÀNH CHỮ THƯỜNG VÀ NGƯỢC LẠI
+    console.log(str.toLowerCase())
+    console.log(str.toUpperCase())
+    //viết hoa chữ cái đầu hoặc vị trí khác
+    let newstr=str.charAt(0).toUpperCase()+str.slice(1)
+    console.log(newstr)
     </script>
 </body>
 </html>
