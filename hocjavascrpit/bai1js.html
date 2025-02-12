@@ -31,6 +31,90 @@
     //viết hoa chữ cái đầu hoặc vị trí khác
     let newstr=str.charAt(0).toUpperCase()+str.slice(1)
     console.log(newstr)
+    //TÁCH CHUỖI
+    console.log(newstr.split(" "))
+    //tách các chữ đó ra và chuyển nó thành 1 mảng lun
+    //tính chu vi
+    let a = Number(prompt("Nhập chiều dài"));
+    let b = Number(prompt("Nhập chiều rộng"));
+    let r = Number(prompt("Nhập bán kính"));
+
+    let PI=Math.PI
+    dientichht=2*PI*r
+    console.log(dientichht)
+    cvht=2*PI*r
+    const dientich=a*b
+    console.log(dientich)
+    const chuvi=(a+b)*2
+    console.log(chuvi)
+    //các hàm toán học thông dụng
+    let soA=25;
+    let soB=Math.sqrt(soA)
+    console.log(soB)
+    console.log(Math.pow(soA,soB))
+    console.log(Math.abs(-10))
+    //Math.celi làm tròn lên và math.floor làm tròn xuống
+    let decimal=4.01
+    let celivalue=Math.ceil(decimal)
+    let floorvalue=Math.floor(decimal)
+    console.log(celivalue)
+    console.log(floorvalue)
+    //làm tròn thành từ 0.5 lên 1
+    let floatingNumber=7.49;
+    let roundvale=Math.round(floatingNumber)
+    console.log(roundvale)
+    //lm tròn x chữ số phần đơn vị
+    let f=3.14159
+    console.log(f.toFixed(2))
+    //tìm giá trị nhỏ và lớn nhất
+    let num1=8,num2=12
+    let minvalue=Math.min(num1,num2)
+    let maxvalue=Math.max(num1,num2)
+    console.log(minvalue);
+    console.log(maxvalue);
+    //hàm ISNAN để kiểm tra trả về đc số hoặc chuỗi đã định nghĩa trc đó hay ko
+    //hàm random
+    let randomvalue=Math.random()*10;
+    console.log(randomvalue)
+    <!-- random số nguyên -->
+    //sẽ randoem từ 0->30
+    let randomvalue3=parseInt(Math.random()*30)+10
+    //tìm x
+    let Tong=Number(prompt("mời nhập tổng 2 số"))
+    let Hieu=Number(prompt("nhập hiệu 2 số: "))
+    let x=(Tong+Hieu)/2
+    let y=x-hieu
+    console.log(x,y)
+    //ép chuổi 
+    let a1=123
+    let b1=string(a1)
+    console.log(typeof b)
+    //ÁP DỤNG SWITCH CASE
+    let number=2;
+    switch(number%2){
+        case 0:
+        console.log("số chẵn")
+        break;
+        case 1:
+        console.log("số lẻ");
+        default:
+        console.log(" không phải số");
+    }
+    let choice=Number(prompt(`Chọn cách tìm kiếm
+    1.tìm theo tên
+    2.tìm theo tác giả
+    3.tìm theo số`))
+    switch(choice){
+        case 1:
+        alert("Bạn đã chọn tìm theo tác giả")
+        break
+        case 2:
+        alert("Bạn đã chọn tìm theo tác giả")
+        break
+        case 3:
+        alert("Bạn đã chọn tìm theo tác giả")
+        break
+    }
     </script>
 </body>
 </html>
